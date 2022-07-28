@@ -18,6 +18,12 @@ AWS App Runner is an AWS service that provides a fast, simple, and cost-effectiv
  2. will build the project docker image and push it to ECR repo.
  3. and then will build the endpoint service (AWS App Runner) and Postgresql (RDS) (as requested copies.)
 
+## prerequisite
+export AWS account credentials:
+```bash
+export AWS_SECRET_ACCESS_KEY=""
+export AWS_ACCESS_KEY_ID=""
+```
 
 ## Build and Deploy
 ```bash
