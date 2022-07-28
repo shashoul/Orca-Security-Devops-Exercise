@@ -22,7 +22,7 @@ AWS App Runner is an AWS service that provides a fast, simple, and cost-effectiv
 cd terraform
 ```
 
-in variable.tf set VPC cidr address and services names as much copies you want to create:
+in variables.tf set VPC cidr address and services names as much copies you want to create:
 ```
 variable "vpc_cidr" {
   description = "AWS VPC cidr address."
@@ -45,6 +45,15 @@ terraform plan
 terraform apply
 terrform output (to see service url endpoint.)
 ```
+
+an Example of terraform output:
+```
+ecr_repository = "904627253972.dkr.ecr.eu-west-1.amazonaws.com/logging-service"
+services_url = {
+  "logging-service" = "dugtr3ggev.eu-west-1.awsapprunner.com"   <- service url
+}
+```
+
 
 ## Architecture
 ![Architecture](application.png)
