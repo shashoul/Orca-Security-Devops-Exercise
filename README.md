@@ -12,12 +12,14 @@ that will provisioing the following AWS resources:
 
 AWS App Runner is an AWS service that provides a fast, simple, and cost-effective way to deploy from source code or a container image directly to a scalable and secure web application in the AWS Cloud. [https://aws.amazon.com/apprunner/] (other option that has been consider is Beanstalk).
 
+
 ## Deployment
  1. Terraform will first build the project VPC and VPC connector for network connection with AWS App Runner and ECR repository. 
  2. will build the project docker image and push it to ECR repo.
  3. and then will build the endpoint service (AWS App Runner) and Postgresql (RDS) (as requested copies.)
 
-### Build and Deploy
+
+## Build and Deploy
 ```bash
 cd terraform
 ```
@@ -53,6 +55,7 @@ services_url = {
   "logging-service" = "dugtr3ggev.eu-west-1.awsapprunner.com"   <- service url
 }
 ```
+
 
 
 ## Architecture
